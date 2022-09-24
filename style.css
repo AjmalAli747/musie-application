@@ -5,8 +5,8 @@
 }
 
 body {
-    width: 100%;
-    /* height: 100vh; */
+  width: 100%;
+  /* height: 100vh; */
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -26,99 +26,128 @@ body {
   position: relative;
 }
 
-
-
-.circle_img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
+.circle_img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.circle_img .img_play_Circle{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid rgb(255, 94, 0);
-    animation: routerImg 1s ease infinite;
+.circle_img .img_play_Circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-width: 10px;
+  border-style: solid;
+  border-color: red green blue orange;
+  /* border: 5px solid rgb(255, 94, 0); */
+  animation: routerImg 1s ease infinite;
 }
 
-@keyframes routerImg{
-    0%{transform: rotate(0deg)}
-    100%{transform: rotate(360deg)}
+@keyframes routerImg {
+  0% {
+    border-color: red green blue orange;
+  }
+  20% {
+    border-color: green orange rgb(255, 38, 0) rgba(255, 166, 0, 0);
+  }
+  40% {
+    border-color: blue skyblue rgb(0, 255, 72) rgb(255, 0, 0);
+  }
+  60% {
+    border-color: orange orange rgb(255, 123, 0) rgb(0, 255, 64);
+  }
+  80% {
+    border-color: purple purple rgb(0, 145, 255) rgb(242, 0, 255);
+  }
+  100% {
+    border-color: skyblue lime rgb(0, 0, 0) rgb(255, 0, 0);
+  }
 }
 
-.img{
-    position: relative;
+.img {
+  position: relative;
 }
 
-.img::before{
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    width: 100%;
-    height: 99%;
-    background-color: rgba(0, 0, 0, 0.559);
+.img::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 99%;
+  background-color: rgba(0, 0, 0, 0.559);
 }
-
-
 
 .box_container img {
   width: 100%;
   height: 250px;
 }
 
-.play_container{
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
+.play_container {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
 }
 
-.song_Name{
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: bold;
+.song_Name {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
-.button_click{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-bottom: 25.50px;
+.button_click {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 25.5px;
 }
 
-.button_click .left_icon i, .right_icon i{
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.341);
-    border-radius: 50%;
-    text-align: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-    line-height: 50px;
-    color: #FFFFFF;
-    transition: 0.5s ease;
+.button_click .left_icon i,
+.right_icon i {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.341);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 50px;
+  color: #ffffff;
+  transition: 0.5s ease;
 }
 
-.button_click .left_icon i:hover, .right_icon i:hover{
-    background-color: rgb(0, 127, 142);
+.button_click .left_icon i:hover,
+.right_icon i:hover {
+  background-color: rgb(0, 127, 142);
 }
 
-.stop_icon i{
-    width: 50px;
-    height: 50px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 50%;
-    text-align: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-    line-height: 50px;
-    color: #FFFFFF;
-    transition: 0.5s ease;
+.stop_icon i {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 50px;
+  color: #ffffff;
+  transition: 0.5s ease;
 }
 
-.stop_icon i:hover{
-    background-color: rgb(0, 127, 142);
+.stop_icon i:hover {
+  background-color: rgb(0, 127, 142);
+}
+
+.img_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
 }

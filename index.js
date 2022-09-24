@@ -35,6 +35,7 @@ let index = 0;
 let songPlay = false;
 
 
+const body_img = document.querySelector(".container");
 const roundedImg = document.querySelector("#roundedImg");
 const titleName = document.querySelector("#title");
 const leftIconName = document.querySelector("#leftIcon");
@@ -52,7 +53,17 @@ const muicePlay = () => {
     titleName.innerHTML = showMusicList?.song;
     musicSong.src = showMusicList.title
 
-    console.log(musicSong);
+    const createImg = document.createElement("img");
+    createImg.classList = "img_container"
+
+    createImg.src = showMusicList?.imgSrc;
+
+    console.log(createImg);
+    
+body_img.appendChild(createImg)
+
+
+    
 }
 
 leftIconName.addEventListener("click", () => {
