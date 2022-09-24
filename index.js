@@ -78,6 +78,7 @@ leftIconName.addEventListener("click", () => {
         
         muicePlay();
         musicSong.play();
+        
     }
     
     
